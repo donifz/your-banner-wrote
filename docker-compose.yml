@@ -29,8 +29,9 @@ services:
       DATABASE_HOST: db
       DATABASE_PORT: 5432
       DATABASE_USER: postgres
-      DATABASE_PASSWORD: miramax92
+      DATABASE_PASSWORD: ${{ secrets.FLY_API_TOKEN }}
       DATABASE_NAME: playground
+      SECRET_KEY: dadwdadsacdk3qrl2jrb2l3jfnlk32nfl2nfjk2bf4wf4fw42rt42gt42gwegfwefwe23fwefsdf
     volumes:
       - .:/app
     command: npm run start:prod

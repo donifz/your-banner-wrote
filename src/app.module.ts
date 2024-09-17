@@ -24,11 +24,11 @@ import * as path from 'path';
     }),
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: process.env.DATABASE_HOST || 'localhost',
-      port: parseInt(process.env.DATABASE_PORT, 10) || 5432,
-      username: process.env.DATABASE_USER || 'postgres',
-      password: process.env.DATABASE_PASSWORD || 'miramax92',
-      database: process.env.DATABASE_NAME || 'playground',
+      host: process.env.PGHOST || 'localhost',
+      port: parseInt(process.env.PGPORT, 10) || 5432,
+      username: process.env.POSTGRES_DB || 'postgres',
+      password: process.env.POSTGRES_PASSWORD || 'miramax92',
+      database: process.env.POSTGRES_USER || 'playground',
       entities: [Posts, User, Role, UserRoles],
       synchronize: process.env.NODE_ENV !== 'production', // Disable synchronize in production
       retryAttempts: 10, // Increase retry attempts
