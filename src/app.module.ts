@@ -47,7 +47,11 @@ export class AppModule {
   constructor() {
     console.log(
       'Database Host:+++++++++++++++++++++++++++++++++++++++++++++++++++++',
-      process.env.DATABASE_HOST,
-    );
+      process.env.PGHOST,
+    ),
+      console.log(
+        'SECRET_KEY Host:+++++++++++++++++++++++++++++++++++++++++++++++++++++',
+        process.env.SECRET_KEY,
+      );
   }
 }
